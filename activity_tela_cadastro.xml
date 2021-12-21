@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bacground_usu"
+        tools:context=".Tela_Cadastro">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="85dp"
+            android:text="Cadastre-se"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/cont"
+            style="@style/ContainerComponents"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/edit_nome"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_baseline_person_outline_24"
+            android:hint="Insira seu Nome"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHighlight="#0B0B0B"
+            android:textColorHint="#FF8E8A8A"
+            app:layout_constraintEnd_toEndOf="@+id/cont"
+            app:layout_constraintStart_toStartOf="@+id/cont"
+            app:layout_constraintTop_toTopOf="@id/cont" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_email"
+            android:hint="seu E-mail"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="#8E8A8A"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/cont"
+            app:layout_constraintStart_toStartOf="@+id/cont"
+            app:layout_constraintTop_toBottomOf="@id/edit_nome" />
+
+        <EditText
+            android:id="@+id/edit_senha"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_olho"
+            android:hint="Crie Uma Senha . . ."
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="#8E8A8A"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/cont"
+            app:layout_constraintStart_toStartOf="@+id/cont"
+            app:layout_constraintTop_toBottomOf="@id/edit_email" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConcluir"
+            style="@style/Button"
+            android:text="Salvar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cont" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
